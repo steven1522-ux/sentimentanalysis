@@ -1,0 +1,29 @@
+/* Style for container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Style for input form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Style for heading tag */
+h1, h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for textarea input */
+textarea {
+  resize: none;
+}
+
+/* Style for submit button */
+button {
+  margin-top: 1rem;
+}
+
+

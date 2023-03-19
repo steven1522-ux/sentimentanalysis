@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analyzer</h1>
+    <textarea id="textInput" rows="4" cols="50" placeholder="Type your text here..."></textarea>
+    <button id="analyzeButton">Analyze Sentiment</button>
+    <div id="result" class="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#analyzeButton").click(function() {
+                const text = $("#textInput").val();
+                $.post("/analyze", { text: text }, function(data) {
+                    $("#result").text("Sentiment: " + data.sentiment);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
